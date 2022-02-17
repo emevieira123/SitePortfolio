@@ -1,8 +1,10 @@
+import { MainRoutes } from "./routes"
+import "./global.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>React</h1>
+      <MainRoutes />
     </div>
   )
 }

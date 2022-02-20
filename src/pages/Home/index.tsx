@@ -30,10 +30,8 @@ export function Home() {
 
 const HomeContainer = styled.div`
   height: 100vh;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 1px solid black;
 `;
 
 const IMGContainer = styled.img`
@@ -44,7 +42,6 @@ height: 100%;
 const TextHome = styled.div`
   width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;

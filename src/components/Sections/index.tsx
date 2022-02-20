@@ -1,6 +1,7 @@
 import { About } from '../../pages/About';
 import { Contact } from '../../pages/Contact';
 import { Home } from '../../pages/Home';
+import { Portfolio } from '../../pages/Portfolio';
 import { SoftSkills } from '../../pages/SoftSkills';
 
 export function Sections() {
@@ -15,9 +16,12 @@ export function Sections() {
         <section id="skills">
           <SoftSkills />
         </section>
+        <section id="portfolio">
+          <Portfolio />
+        </section>
         <section id="contato">
           <Contact />
-        </section>
+        </section>        
       </section>
   );
 }

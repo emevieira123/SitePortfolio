@@ -1,11 +1,12 @@
-import React from 'react';
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
+import LogoIMG from '../../assets/logo.png';
 
 export function Menu() {
   return (
     <MenuContainer>
-      <p>Vieira<Teste>Dev</Teste>Code</p>
+      <Logo src={LogoIMG} alt="Vieira Dev Code" />
+
       <Link
         activeClass="active"
         to="home"
@@ -13,8 +14,9 @@ export function Menu() {
         smooth={true}
         offset={-70}
         duration={500}
+        href="#"
       >
-        <button>Home</button>
+        Home
       </Link>
       <Link
         activeClass="active"
@@ -23,8 +25,9 @@ export function Menu() {
         smooth={true}
         offset={-70}
         duration={500}
+        href="#"
       >
-        <button>Sobre mim</button>
+        About
       </Link>
       <Link
         activeClass="active"
@@ -33,8 +36,20 @@ export function Menu() {
         smooth={true}
         offset={-70}
         duration={500}
+        href="#"
       >
-        <button>Soft Skills</button>
+        Soft Skills
+      </Link>
+      <Link
+        activeClass="active"
+        to="portfolio"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        href="#"
+      >
+        Portfólio
       </Link>
       <Link
         activeClass="active"
@@ -43,8 +58,9 @@ export function Menu() {
         smooth={true}
         offset={-70}
         duration={500}
+        href="#"
       >
-        <button>Contato</button>
+        Contact
       </Link>
 
     </MenuContainer>
@@ -59,42 +75,34 @@ const MenuContainer = styled.div`
   height: 65px;
   background: #fff;
 
-  filter: opacity(80%);
+  /* filter: opacity(80%); */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 
   display: flex;
   align-items: center;
 
-  p {
-    padding-right: 45%;
-    margin-left: 30px;
-    font-size: 2rem;
-    font-weight: 600;
+  a {
+    margin-left: 40px;
+    font-size: 1.25rem;
+    font-weight: 400;
     color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  button {
-    margin-left: 1px;
-    width: 9rem;
-    height: 4rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    background: transparent;
-    color: #000;
-    cursor: pointer;
-    border:none!important;
-  }
-
-  button:hover {
+  a:hover {
     color: #7538A8;
     transition: 0.2s;
   }
 
-  button:focus {
+  a:focus {
     outline-style: none;
   }
 `;
 
-const Teste = styled.span`
-color: #7538A8;
+const Logo = styled.img`
+  width: 300px;
+  height: 50px;
 `;

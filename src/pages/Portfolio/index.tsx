@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Footer } from '../../components/Fotter';
 
 export function Portfolio() {
   return (
@@ -18,18 +19,19 @@ export function Portfolio() {
           <div><h4>Em Desenvolvimento</h4></div>
         </ContainerGrip>
       </PortfolioContainer>
+      {/* <Footer /> */}
     </>
   );
 }
 
 const PortfolioContainer = styled.div`
-  height: 91.7vh;
+  height: 95vh;
   background: #333333;
 `;
 
 const PortfolioHeader = styled.div`
   width: 100%;
-  height: 10vh;
+  height: 11vh;
   
   display: flex;
   align-items: center;

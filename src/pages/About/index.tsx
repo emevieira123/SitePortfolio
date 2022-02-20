@@ -3,7 +3,7 @@ import imgAbout from "../../assets/Reactjs-App.png";
 
 export function About() {
   return (
-      <SobreContainer>  
+      <AboutContainer>  
 
         <AboutHeader>
           <h1>About</h1>
@@ -44,11 +44,11 @@ export function About() {
             </li>
           </ul>
         </RigthContainer>
-      </SobreContainer>
+      </AboutContainer>
   );
 }
 
-const SobreContainer = styled.div`
+const AboutContainer = styled.div`
   width: 100%;
   background: #333333;
 
@@ -58,7 +58,7 @@ const SobreContainer = styled.div`
 
 const AboutHeader = styled.div`
   width: 100%;
-  height: 10vh;
+  height: 11vh;
   font-size: 2.5rem;
   display: flex;
   align-items: center;
@@ -71,14 +71,14 @@ const AboutHeader = styled.div`
 `;
 
 const ContainerImg = styled.div`
-  height: 82vh;
+  height: 89vh;
   display: flex;
   align-items: center;
   justify-content: center;  
 
   img {
-    width: 50%;
-    height: 35%;
+    width: 60%;
+    height: 40%;
   }
 `;
 

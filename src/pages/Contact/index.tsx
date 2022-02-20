@@ -1,7 +1,25 @@
-import React from 'react';
+import 'antd/dist/antd.css';
+import { Drawer } from 'antd';
 
-export function Contact() {
-  return (
-    <h1>Contact</h1>
-  );
+interface ContactProps {
+  onClose: () => void;
+  visible: boolean;
 }
+
+export function Contact({onClose, visible}: ContactProps) {
+  return (
+    <>
+      <Drawer 
+        title="Contact" 
+        placement="right" 
+        onClose={onClose} 
+        visible={visible}
+        width={"45vw"}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Drawer>
+    </>
+  );
+};

@@ -1,9 +1,21 @@
+import { useState } from 'react';
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
 import LogoIMG from '../../assets/logo.png';
+import { Contact } from '../../pages/Contact';
 
 export function Menu() {
+  const [visible, setVisible] = useState(false);
+
+  const showDrawer = () => {
+    setVisible(true);
+  };
+
+  const onClose = () => {
+    setVisible(false);
+  };
   return (
+    <>
     <MenuContainer>
       <Logo src={LogoIMG} alt="Vieira Dev Code" />
 
@@ -20,7 +32,7 @@ export function Menu() {
       </Link>
       <Link
         activeClass="active"
-        to="sobre"
+        to="about"
         spy={true}
         smooth={true}
         offset={-70}
@@ -58,12 +70,13 @@ export function Menu() {
         smooth={true}
         offset={-70}
         duration={500}
-        href="#"
+        onClick={showDrawer}
       >
         Contact
-      </Link>
-
+      </Link>      
     </MenuContainer>
+    <Contact onClose={onClose} visible={visible} />
+    </>
   );
 }
 

@@ -22,7 +22,7 @@ export function Footer() {
         </ContactButtonContainer>
 
         <StyleSociais>
-          <a href="https://www.linkedin.com/in/emerson-vieira-9416267b/" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/emevieira/" target="_blank" rel="noreferrer">
             <IconLikedin />
           </a>
           <a href="https://github.com/emevieira123/" target="_blank" rel="noreferrer">
@@ -34,12 +34,10 @@ export function Footer() {
           <a href="https://www.instagram.com/emerson_vchaves/" target="_blank" rel="noreferrer">
             <IconInstagram />
           </a>
-          <a href="https://www.instagram.com/emerson_vchaves/" target="_blank" rel="noreferrer">
+          <a href="https://twitter.com/EmevieiraVieira" target="_blank" rel="noreferrer">
             <IconTwitter />
           </a>
-          <a href="https://www.instagram.com/emerson_vchaves/" target="_blank" rel="noreferrer">
-            <IconGmail />
-          </a>
+          
         </StyleSociais>
 
         <p>© Copyright 2022 VieiraDevCode. All Rights Reserved.</p>

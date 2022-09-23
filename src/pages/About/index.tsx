@@ -1,48 +1,27 @@
 import styled from "styled-components";
-import imgAbout from "../../assets/Reactjs-App.png";
+import { AboutImg } from "../../assets/AboutImg";
+import { HeaderTitle } from "../../components/Header";
 
 export function About() {
   return (
-      <AboutContainer>  
+      <AboutContainer>
 
-        <AboutHeader>
-          <h1>About</h1>
-        </AboutHeader>     
-
-        <ContainerImg>          
-          <img src={imgAbout} alt="" />
+        <ContainerImg>
+          <AboutImg width={439} height={547} />
         </ContainerImg>
 
         <RigthContainer>
           <p>
-            Atualmente atuo como <span>Suporte e
-            Desenvolvedor Front-end Jr</span>, tenho 32 anos
-            e sou formado pela Fatec Senai no curso de Analise
-            e Desenvolvimento de Sistemas, tenho buscado me capacitar
-            cada vez mais para atingir minhas metas.
+            Sou graduado no curso de Análise e Desenvolvimento <br/>
+            de Sistemas.
           </p>
-          <span>Alguns dos meus hobbies são:</span>
 
-          <ul>
-            <li>
-              <span>Lo-fi</span>
-            </li>
-            <li>
-              <span>Estudar</span>
-            </li>
-            <li>
-              <span>Jogar</span>
-            </li>
-            <li>
-              <span>Séries</span>
-            </li>
-            <li>
-              <span>Filmes</span>
-            </li>
-            <li>
-              <span>Família</span>
-            </li>
-          </ul>
+          <p>
+            Hoje atuo como Desenvolvedor Web Jr e prático o aprendizado <br/>
+            contínuo em desenvolvimento de sistemas web, com foco em <br/>
+            <span>ReactJS</span>. Meu objetivo é em um futuro próximo me tornar um <br/>
+            Desenvolvedor FullStack.
+          </p>
         </RigthContainer>
       </AboutContainer>
   );
@@ -50,31 +29,18 @@ export function About() {
 
 const AboutContainer = styled.div`
   width: 100%;
-  background: #333333;
+  height: 95vh;
+  background: #121414;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-`;
-
-const AboutHeader = styled.div`
-  width: 100%;
-  height: 11vh;
-  font-size: 2.5rem;
-  display: flex;
-  align-items: center;
-  grid-column: 1/3;
-
-  h1 {
-    margin-left: 10%;
-    color: #FFFFFF;
-  }
 `;
 
 const ContainerImg = styled.div`
   height: 89vh;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 
   img {
     width: 60%;
@@ -84,7 +50,7 @@ const ContainerImg = styled.div`
 
 const RigthContainer = styled.div`
   font-size: 1.25rem;
-  color: #FFF;
+  color: var(--text-primary);
 
   display: flex;
   align-items: center;
@@ -95,7 +61,7 @@ const RigthContainer = styled.div`
     width: 70%;
 
     span {
-      color: #F4BB47;
+      color: var(--secondary-600);
     }
   }
 
@@ -109,7 +75,7 @@ const RigthContainer = styled.div`
   }
 
   li {
-    color: #F4BB47;
+    color: #568FF7;
 
     span {
       color: #FFF;

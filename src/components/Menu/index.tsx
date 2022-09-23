@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
+import { Logo } from '../../assets/Logo';
 import LogoIMG from '../../assets/logo.png';
 import { Contact } from '../../pages/Contact';
 
@@ -17,7 +18,7 @@ export function Menu() {
   return (
     <>
     <MenuContainer>
-      <Logo src={LogoIMG} alt="Vieira Dev Code" />
+      <Logo style={{marginLeft: '2rem'}} />
 
       <Link
         activeClass="active"
@@ -73,7 +74,7 @@ export function Menu() {
         onClick={showDrawer}
       >
         Contact
-      </Link>      
+      </Link>
     </MenuContainer>
     <Contact onClose={onClose} visible={visible} />
     </>
@@ -86,9 +87,8 @@ const MenuContainer = styled.div`
   top: 0;
   width: 100%;
   height: 65px;
-  background: #fff;
+  background: var(--primary-900);
 
-  /* filter: opacity(80%); */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 
   display: flex;
@@ -98,7 +98,7 @@ const MenuContainer = styled.div`
     margin-left: 40px;
     font-size: 1.25rem;
     font-weight: 400;
-    color: #000;
+    color: var(--text-primary);
 
     display: flex;
     align-items: center;
@@ -106,16 +106,11 @@ const MenuContainer = styled.div`
   }
 
   a:hover {
-    color: #7538A8;
+    color: var(--secondary-600);
     transition: 0.2s;
   }
 
   a:focus {
     outline-style: none;
   }
-`;
-
-const Logo = styled.img`
-  width: 300px;
-  height: 50px;
 `;

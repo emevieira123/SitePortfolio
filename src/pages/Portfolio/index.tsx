@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { Footer } from '../../components/Fotter';
+import { HeaderTitle } from '../../components/Header';
 
 export function Portfolio() {
   return (
-    <>
       <PortfolioContainer>
-        <PortfolioHeader>
+        <HeaderTitle>
           <h1>Portfólio</h1>
-        </PortfolioHeader>
+        </HeaderTitle>
 
         <ContainerText>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim blandit scelerisque. Donec nec odio metus. Ut gravida urna sem, vitae posuere ex malesuada nec. Fusce malesuada arcu quis odio consectetur gravida. Nullam in elementum diam. </span>
@@ -19,28 +19,14 @@ export function Portfolio() {
           <div><h4>Em Desenvolvimento</h4></div>
         </ContainerGrip>
       </PortfolioContainer>
-      {/* <Footer /> */}
-    </>
   );
 }
 
 const PortfolioContainer = styled.div`
-  height: 95vh;
-  background: #333333;
-`;
+  /* height: 95vh; */
+  background: var(--primary-800);
 
-const PortfolioHeader = styled.div`
-  width: 100%;
-  height: 11vh;
-  
-  display: flex;
-  align-items: center;
-
-  h1 {
-    font-size: 3rem;
-    margin-left: 10%;
-    color: #FFFFFF;
-  }
+  border: 1px solid var(--primary-800);
 `;
 
 const ContainerText = styled.div`
@@ -49,13 +35,13 @@ const ContainerText = styled.div`
 
   span {
     font-size: 24px;
-    color: #FFFFFF;
+    color: var(--text-primary);
   }
 `;
 
 const ContainerGrip = styled.div`
   width: 100%;
-  height: 70vh;  
+  height: 70vh;
 
   display: flex;
   align-items: center;
@@ -71,12 +57,12 @@ const ContainerGrip = styled.div`
     justify-content: center;
 
     h4 {
-      color: #FFFFFF;
+      color: var(--text-primary);
     }
   }
 
   div:hover {
-    border: 2px solid #6C63FF;
-    background: #333444;
+    border: 2px solid var(--secondary-600);
+    background: var(--card-color);
   }
 `;

@@ -1,7 +1,24 @@
+:root{
+  --primary-900: #0D0F0D;
+  --primary-800: #121414;
+  --secondary-600: #EC3B3B;
+  --text-primary: #F4F4F6;
+  --card-color: #333444;
+
+}
+
+.light-mode:root{
+  --primary-900: #FFFFFF;
+  --primary-800: #EFECEC;
+  --secondary-600: #EC3B3B;
+  --text-primary: #121414;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: var(--background-900);
 }
 
 h1, h2, h3, h4, h5, h6, a, p, label, span, strong {

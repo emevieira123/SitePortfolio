@@ -1,30 +1,34 @@
 import { Menu } from '../../components/Menu';
 import styled from "styled-components";
 import imgBackgound from "../../assets/desenvolvimento.png";
+import { HomeImg } from '../../assets/HomeImg';
+import { Row } from 'antd';
 
 export function Home() {
-  return (    
+  return (
     <HomeContainer>
-    <Menu />
+      <Menu />
 
-    <TextHome>
-      <p>Olá sou,</p>
+      <TextHome>
+        <p>Olá sou,</p>
 
-      <b>Emerson Vieira</b>
+        <b>Emerson Vieira</b>
 
-      <p>
-        Desenvolvedor front-end jr.
-      </p>
+        <p>
+          Desenvolvedor Web Jr.
+        </p>
 
-        <Button href="https://github.com/emevieira123/" target="_blank" rel="noreferrer">
-        <span>GitHub</span>
+        <Button href="https://www.linkedin.com/in/emevieira/" target="_blank" rel="noreferrer">
+          <span>Linkedin</span>
         </Button>
 
-    </TextHome>
+      </TextHome>
 
-    <IMGContainer src={imgBackgound} alt="" />
+      <IMGContainer>
+        <HomeImg width={739} height={504} />
+      </IMGContainer>
 
-  </HomeContainer>
+    </HomeContainer>
   );
 }
 
@@ -32,29 +36,32 @@ const HomeContainer = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  background: var(--primary-900);
 `;
 
-const IMGContainer = styled.img`
+const IMGContainer = styled(Row)`
 width: 100%;
 height: 100%;
+justify-content: center;
+align-items: center;
 `;
 
-const TextHome = styled.div`
+const TextHome = styled(Row)`
   width: 100%;
   height: 100%;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 30%;
 
   p {
-    color: #000;
+    color: #f4f4f6;
     font-size: 2rem;
     margin: 0;
   }
 
   b {
-    color: #7538A8;
+    color: var(--secondary-600);
     font-size: 3rem;
     font-weight: 500;
   }
@@ -68,8 +75,8 @@ const Button = styled.a`
   font-size: 18px;
   font-family: sans-serif;
   font-weight: bold;
-  color: #7538A8;
-  border: 2px solid #7538A8;
+  color: #fff;
+  border: 1px solid #fff;
   margin-top: 30px;
   letter-spacing: 2px;
   text-align: center;
@@ -88,12 +95,12 @@ const Button = styled.a`
     left: 0;
     width: 0;
     height: 100%;
-    background: #7538A8;
+    background: var(--secondary-600);
     transition: all .35s;
   }
 
   &:hover {
-    color: #fff;
+    color: var(--text-white);
   }
 
   &:hover::after {

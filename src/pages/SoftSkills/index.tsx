@@ -7,15 +7,19 @@ import { IconTS } from '../../assets/IconTS';
 import { IconReact } from '../../assets/IconReact';
 import { CardSoftSkills } from '../../components/Cards/CardSoftSkills';
 import { HeaderTitle } from '../../components/Header';
+import { IconNextJs } from '../../assets/IconNextJS';
+import { IconGithub } from '../../assets/IconGithub';
+import { IconFigma } from '../../assets/IconFigma';
 
 export function SoftSkills() {
   return (
     <SoftContainer>
-      <HeaderTitle>
+      {/* <HeaderTitle>
         <h1>SoftSkills</h1>
-      </HeaderTitle>
+      </HeaderTitle> */}
 
       <ContentContainer>
+      <TitleSkills>Conhecimentos</TitleSkills>
         <CardSoftSkills dataTestId="card-conhecimentos">
           <IconHTML />
           <IconCss />
@@ -24,12 +28,17 @@ export function SoftSkills() {
           <IconReact />
         </CardSoftSkills>
 
+        <TitleSkills>Estudando / Aprimorando</TitleSkills>
         <CardSoftSkills dataTestId="card-estudando-aprimorando">
-
+          <IconTS />
+          <IconReact />
+          <IconNextJs />
         </CardSoftSkills>
 
+        <TitleSkills>Outros Conhecimentos</TitleSkills>
         <CardSoftSkills dataTestId="card-outros-conhecimentos">
-
+          <IconGithub />
+          <IconFigma />
         </CardSoftSkills>
       </ContentContainer>
 
@@ -38,14 +47,19 @@ export function SoftSkills() {
 }
 
 const SoftContainer = styled.div`
-  height: 83vh;
   background: var(--primary-900);
+  padding: 2rem 0 2rem 0;
 `;
 
 const ContentContainer = styled(Row)`
   width: 100%;
-  /* height: 100%; */
   justify-content: center;
-  border: 1px solid red;
-  /* flex-direction: column; */
+  align-items: center;
+  flex-direction: column;
+`;
+
+const TitleSkills = styled.span`
+  color: var(--text-primary);
+  font-size: 1.5em;
+  margin-top: 2rem;
 `;

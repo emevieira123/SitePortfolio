@@ -30,7 +30,7 @@ export function About() {
 const AboutContainer = styled.div`
   width: 100%;
   height: 95vh;
-  background: #121414;
+  background: var(--primary-800);
 
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -20,7 +20,6 @@ const ContainerHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  grid-column: 1/3;
 
   h1 {
     color: #FFFFFF;

@@ -1,25 +1,20 @@
+import { CardSoftSkills } from '../../components/Cards/CardSoftSkills';
 import { Row } from 'antd';
-import styled from 'styled-components';
 import { IconCss } from '../../assets/IconCss';
 import { IconHTML } from '../../assets/IconHTML';
 import { IconJS } from '../../assets/IconJS';
 import { IconTS } from '../../assets/IconTS';
 import { IconReact } from '../../assets/IconReact';
-import { CardSoftSkills } from '../../components/Cards/CardSoftSkills';
-import { HeaderTitle } from '../../components/Header';
 import { IconNextJs } from '../../assets/IconNextJS';
 import { IconGithub } from '../../assets/IconGithub';
 import { IconFigma } from '../../assets/IconFigma';
+import styled from 'styled-components';
 
 export function SoftSkills() {
   return (
     <SoftContainer>
-      {/* <HeaderTitle>
-        <h1>SoftSkills</h1>
-      </HeaderTitle> */}
-
       <ContentContainer>
-      <TitleSkills>Conhecimentos</TitleSkills>
+        <TitleSkills>Conhecimentos</TitleSkills>
         <CardSoftSkills dataTestId="card-conhecimentos">
           <IconHTML />
           <IconCss />
@@ -27,28 +22,34 @@ export function SoftSkills() {
           <IconTS />
           <IconReact />
         </CardSoftSkills>
+      </ContentContainer>
 
+      <ContentContainer>
         <TitleSkills>Estudando / Aprimorando</TitleSkills>
         <CardSoftSkills dataTestId="card-estudando-aprimorando">
           <IconTS />
           <IconReact />
           <IconNextJs />
         </CardSoftSkills>
+      </ContentContainer>
 
+      <ContentContainer>
         <TitleSkills>Outros Conhecimentos</TitleSkills>
         <CardSoftSkills dataTestId="card-outros-conhecimentos">
           <IconGithub />
           <IconFigma />
         </CardSoftSkills>
       </ContentContainer>
-
     </SoftContainer >
   );
 }
 
-const SoftContainer = styled.div`
+const SoftContainer = styled(Row)`
+  height: 93vh;
   background: var(--primary-900);
-  padding: 2rem 0 2rem 0;
+  padding: 0 0 2rem 0;
+  justify-content: center;
+  align-items: space-around;
 `;
 
 const ContentContainer = styled(Row)`

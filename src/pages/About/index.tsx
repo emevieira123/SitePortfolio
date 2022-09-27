@@ -12,14 +12,14 @@ export function About() {
 
         <RigthContainer>
           <p>
-            Sou graduado no curso de Análise e Desenvolvimento <br/>
+            Sou graduado no curso de Análise e Desenvolvimento
             de Sistemas.
           </p>
 
           <p>
-            Hoje atuo como Desenvolvedor Web Jr e prático o aprendizado <br/>
-            contínuo em desenvolvimento de sistemas web, com foco em <br/>
-            <span>ReactJS</span>. Meu objetivo é em um futuro próximo me tornar um <br/>
+            Hoje atuo como Desenvolvedor Web Jr e prático o aprendizado
+            contínuo em desenvolvimento de sistemas web, com foco em
+            <span> ReactJS</span>. Meu objetivo é em um futuro próximo me tornar um
             Desenvolvedor FullStack.
           </p>
         </RigthContainer>

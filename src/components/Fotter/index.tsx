@@ -1,3 +1,4 @@
+import { Button, Row } from 'antd';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { Contact } from '../../pages/Contact';
@@ -23,21 +24,21 @@ export function Footer() {
 
         <StyleSociais>
           <a href="https://www.linkedin.com/in/emevieira/" target="_blank" rel="noreferrer">
-            <IconLikedin />
+            <IconButton icon={<IconLikedin />} />
           </a>
           <a href="https://github.com/emevieira123/" target="_blank" rel="noreferrer">
-            <IconGithub />
+            <IconButton icon={<IconGithub />} />
           </a>
           <a href="https://www.facebook.com/emersonvie" target="_blank" rel="noreferrer">
-            <IconFacebook />
+            <IconButton icon={<IconFacebook />} />
           </a>
           <a href="https://www.instagram.com/emerson_vchaves/" target="_blank" rel="noreferrer">
-            <IconInstagram />
+            <IconButton icon={<IconInstagram />} />
           </a>
           <a href="https://twitter.com/EmevieiraVieira" target="_blank" rel="noreferrer">
-            <IconTwitter />
+            <IconButton icon={<IconTwitter />} />
           </a>
-          
+
         </StyleSociais>
 
         <p>© Copyright 2022 VieiraDevCode. All Rights Reserved.</p>
@@ -51,7 +52,7 @@ export function Footer() {
 const FooterContainer = styled.div`
   width: 100%;
   height: 10rem;
-  background: #FFFFFF;
+  background: var(--primary-900);
 
   display: flex;
   justify-content: center;
@@ -61,7 +62,7 @@ const FooterContainer = styled.div`
 
   p {
   font-size: 1rem;
-  color: #7538A8;
+  color: var(--text-primary);
   }
 `;
 
@@ -75,19 +76,20 @@ const ContactButtonContainer = styled.div`
 
   button {
     width: 9rem;
-    height: 3rem;
-    border: 1px solid #7538A8;
-    color: #7538A8;
+    height: 2.5rem;
+    margin-top: 2rem;
+    border: 1px solid var(--text-primary);
+    color: var(--text-primary);
     border-radius: 5px;
     background: transparent;
     font-size: 1.25rem;
-    transition: all .35s;
+    transition: all 0.5s;
   }
 
   button:hover {
     border: 0;
-    background: #7538A8;
-    color: #FFFFFF;
+    background: var(--text-primary);
+    color: var(--primary--900);
   }
 `;
 
@@ -100,5 +102,17 @@ const StyleSociais = styled.div`
 
   a {
   margin: 0.5rem;
+  color: white;
+  }
+`;
+
+const IconButton = styled(Button)`
+  background: transparent;
+  border: 0;
+  color: var(--text-primary);
+  :focus,
+  :hover {
+    color: var(--secondary-600);
+    background: transparent;
   }
 `;

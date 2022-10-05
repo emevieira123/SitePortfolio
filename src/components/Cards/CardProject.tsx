@@ -30,7 +30,7 @@ export function CardProject({ imgURL, title, description }: CardProjectProps) {
 
 const CardContainer = styled(Row)`
   width: 30%;
-  height: 40rem;
+  height: 80vh;
   border-radius: 20px;
   background: var(--primary-900);
   padding: 1rem;

@@ -1,9 +1,10 @@
 import 'antd/dist/antd.css';
-import { Drawer } from 'antd';
+import { Button, Drawer, Row } from 'antd';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import { ImgMsg } from '../../components/SVG/ImgMsg';
 import { toast } from 'react-toastify';
+import { AiOutlineClose } from 'react-icons/ai';
 
 interface ContactProps {
   onClose: () => void;
@@ -26,15 +27,26 @@ export function Contact({ onClose, visible }: ContactProps) {
 
   return (
     <>
-      <Drawer
-        title="Contact"
+      <ContactDrawer
+        title={
+          <Title>
+            <span>Contact</span>
+            <CloseButton icon={
+              <AiOutlineClose style={{ width: '1.25rem', height: '1.25rem'}}
+              onClick={onClose}
+            />
+          }
+          />
+          </Title>
+        }
         placement="right"
         onClose={onClose}
         visible={visible}
         width={"45vw"}
+        closable={false}
       >
         <ContactContainer>
-          <ImgMsg style={{width: "20%", height: "40%"}} />
+          <ImgMsg style={{ width: "20%", height: "40%" }} />
 
           <h1>Formulário para Contato</h1>
 
@@ -51,10 +63,44 @@ export function Contact({ onClose, visible }: ContactProps) {
 
           </FormContainer>
         </ContactContainer>
-      </Drawer>
+      </ContactDrawer>
     </>
   );
 };
+
+const ContactDrawer = styled(Drawer)`
+  .ant-drawer-header {
+    background: var(--primary-900);
+  }
+  .ant-drawer-body {
+    background: var(--primary-900);
+  }
+`;
+
+const Title = styled(Row)`
+  width: 100%;
+  color: var(--text-primary);
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    font-size: 1.25rem;
+  }
+`;
+
+const CloseButton = styled(Button)`
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background: none;
+    color: var(--secondary-600);
+  }
+`;
 
 const ContactContainer = styled.div`
   width: 100%;
@@ -62,11 +108,13 @@ const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   h1 {
     width: 100%;
     text-align: center;
     margin-top: 20px;
+    color: var(--text-primary);
   }
 `;
 
@@ -80,20 +128,20 @@ const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
 
-    input { 
+    input, textarea {
     width: 80%;
     height: 3rem;
-    border: 1px solid black;
+    border: 1px solid var(--text-primary);
     border-radius: 5px;
     margin-bottom: 10px;
+    padding: 0 5px 0 5px;
+    background: var(--primary-800);
+    color: var(--text-primary);
+    outline: none;
     }
 
-    textarea { 
-      width: 80%;
+    textarea {
       height: 8rem;
-      border: 1px solid black;
-      border-radius: 5px;
-      margin-bottom: 10px;
     }
 
     button {
@@ -101,14 +149,14 @@ const FormContainer = styled.div`
       height: 2.5rem;
       border-radius: 5px;
       border: 0;
-      background: #7538A8;
+      background: var(--secondary-600);
       color: #fff;
       font-size: 1.5rem;
       transition: all 0.35s;
 
       &:hover {
-        filter: brightness(0.9);
+        filter: brightness(0.8);
       }
     }
-  }  
+  }
 `;

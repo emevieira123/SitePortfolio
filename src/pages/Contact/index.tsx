@@ -52,6 +52,7 @@ export function Contact({ onClose, visible }: ContactProps) {
 
           <FormContainer>
             <form onSubmit={enviarEmail}>
+
               <input className="contato-nome" type="text" placeholder="Nome" name="name" required />
               <input className="contato-email" type="email" placeholder="E-mail" name="email" required />
               <input className="contato-telefone" type="text" placeholder="Telefone" name="phone" />

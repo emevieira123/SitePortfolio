@@ -7,7 +7,7 @@ export const MenuContainer = styled.div`
   width: 100%;
   height: 65px;
   background: var(--gray-800);
-  border-bottom: 1px solid var(--purple);
+  border-bottom: 1px solid rgba(108, 99, 255, 0.25);
   padding: 0 2rem;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);

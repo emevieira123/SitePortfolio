@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const HomeContainer = styled.div`
   height: 100vh;
-
   background: var(--gray-800);
-  padding: 4.2rem 0 0 0;
+  margin-top: 4.2rem;
 `;
 
 export const TitleContainer = styled.div`

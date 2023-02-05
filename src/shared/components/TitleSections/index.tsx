@@ -16,17 +16,17 @@ export function TitleSections({ title, subTitle }: TitleProps) {
 }
 
 const Container = styled(Row)`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    span {
-        color: var(--gray-100);
-        font-weight: bold;
-    }
-    strong {
-        color: var(--purple);
-        font-size: 1.25rem;
-    }
+  span {
+    color: var(--gray-100);
+    font-weight: bold;
+  }
+  strong {
+    color: var(--purple);
+    font-size: 1.25rem;
+  }
 `;

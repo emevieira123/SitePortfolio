@@ -1,66 +1,32 @@
-import { CardSoftSkills } from '../../components/Cards/CardSoftSkills';
 import { Row } from 'antd';
-import { IconCss } from '../../assets/IconCss';
-import { IconHTML } from '../../assets/IconHTML';
-import { IconJS } from '../../assets/IconJS';
-import { IconTS } from '../../assets/IconTS';
-import { IconReact } from '../../assets/IconReact';
-import { IconNextJs } from '../../assets/IconNextJS';
-import { IconGithub } from '../../assets/IconGithub';
-import { IconFigma } from '../../assets/IconFigma';
 import styled from 'styled-components';
+import { TitleSections } from '../../shared/components/TitleSections';
+import { DataBackSkills, DataFrontSkills } from './utils/DataSkills';
+
+import { SkillCard } from './components/SkillCard';
 
 export function SoftSkills() {
   return (
     <SoftContainer>
-      <ContentContainer>
-        <TitleSkills>Conhecimentos</TitleSkills>
-        <CardSoftSkills dataTestId="card-conhecimentos">
-          <IconHTML />
-          <IconCss />
-          <IconJS />
-          <IconTS />
-          <IconReact />
-        </CardSoftSkills>
-      </ContentContainer>
-
-      <ContentContainer>
-        <TitleSkills>Estudando / Aprimorando</TitleSkills>
-        <CardSoftSkills dataTestId="card-estudando-aprimorando">
-          <IconTS />
-          <IconReact />
-          <IconNextJs />
-        </CardSoftSkills>
-      </ContentContainer>
-
-      <ContentContainer>
-        <TitleSkills>Outros Conhecimentos</TitleSkills>
-        <CardSoftSkills dataTestId="card-outros-conhecimentos">
-          <IconGithub />
-          <IconFigma />
-        </CardSoftSkills>
-      </ContentContainer>
+      <TitleSections subTitle='Quais são' title='Minhas habilidades' />
+      <ContainerFrontBack>
+        <SkillCard title="Frontend Developer" dataSource={DataFrontSkills} />
+        <SkillCard title="Backend Developer" dataSource={DataBackSkills} />
+      </ContainerFrontBack>
     </SoftContainer >
   );
 }
 
 const SoftContainer = styled(Row)`
   height: 93vh;
-  background: var(--primary-900);
-  padding: 0 0 2rem 0;
-  justify-content: center;
-  align-items: space-around;
-`;
+  background: var(--gray-800);
+  padding-top: 2rem;
 
-const ContentContainer = styled(Row)`
-  width: 100%;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 `;
 
-const TitleSkills = styled.span`
-  color: var(--text-primary);
-  font-size: 1.5em;
+const ContainerFrontBack = styled(Row)`
   margin-top: 2rem;
+  padding: 2rem;
+  gap: 2%;
 `;

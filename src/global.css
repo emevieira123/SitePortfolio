@@ -1,10 +1,14 @@
 :root{
   --primary-900: #0D0F0D;
   --primary-800: #121414;
-  --secondary-600: #EC3B3B;
   --text-primary: #F4F4F6;
+  --secondary-600: #EC3B3B;
   --card-color: #333444;
-
+  
+  --gray-100: #F4F4F6;
+  --gray-500: #2D2D34;
+  --gray-800: #17171B;
+  --purple: #6C63FF;
 }
 
 .light-mode:root{
@@ -22,6 +26,7 @@ html, body {
 
 body {
   background: var(--primary-900);
+  color: var(--gray-100);
 }
 
 h1, h2, h3, h4, h5, h6, a, p, label, span, strong {

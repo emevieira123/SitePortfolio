@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
 import { Logo } from '../../assets/Logo';
-import { Contact } from '../../pages/Contact';
+import { DrawerContact } from '../../pages/Contact';
 import { MenuContainer } from './style';
+import { DataMenu } from './utils/DataMenu';
 
 export function Menu() {
   const [visible, setVisible] = useState(false);
@@ -16,68 +17,28 @@ export function Menu() {
   };
   return (
     <>
-    <MenuContainer>
-      <Logo />
+      <MenuContainer>
+        <Logo />
 
-      <Link
-        activeClass="active"
-        to="home"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        href="#"
-      >
-        Home
-      </Link>
-      <Link
-        activeClass="active"
-        to="about"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        href="#"
-      >
-        About
-      </Link>
-      <Link
-        activeClass="active"
-        to="skills"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        href="#"
-      >
-        Soft Skills
-      </Link>
-      <Link
-        activeClass="active"
-        to="portfolio"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        href="#"
-      >
-        Portfólio
-      </Link>
-      <Link
-        activeClass="active"
-        to="contato"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        onClick={showDrawer}
-      >
-        Contact
-      </Link>
-    </MenuContainer>
-    <Contact onClose={onClose} visible={visible} />
+        {DataMenu.map((item) => {
+          return (
+            <Link
+              key={item.id}
+              activeClass="active"
+              to={item.link}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              href="#"
+              onClick={item.title === 'Contato' ? showDrawer : () => {}}
+            >
+              {item.title}
+            </Link>
+          );
+        })}
+      </MenuContainer>
+      {visible && <DrawerContact onClose={onClose} visible={visible} />}
     </>
   );
 }
-
-
